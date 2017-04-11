@@ -5,11 +5,13 @@
  * Date: 11-4-2017
  * Time: 11:26
  */
-
+session_start();
 $tracks = 'http://api.deezer.com/playlist/1266971851/tracks';
 $decoded = json_decode(file_get_contents($tracks));
 
-
+//echo '<pre>';
+//print_r($decoded->data);
+//echo '</pre>';
 ?>
 
 
@@ -17,12 +19,12 @@ $decoded = json_decode(file_get_contents($tracks));
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <title>Top Netherlands</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="css/style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -32,6 +34,52 @@ $decoded = json_decode(file_get_contents($tracks));
     </a>
 </div>
 <div class="container">
+    <?php
+    $limit = 0;
+    $wrapperCount = 0;
+    $array1 = array();
+    foreach ($decoded->data as $aItem){
+        array_push($array1, $aItem->id);
+    }
+    ?>
+
+    <div class="wrapper wrapper0" data-wrapperid="0" id="wrapper0">
+        <a href="nummer.php?id=<?php echo $array1[array_rand($array1)]; ?>">
+            <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <?php
+    foreach(array_chunk($decoded->data, 4, true) as $array){
+        $wrapperCount++;
+        echo "<div class='wrapper wrapper$wrapperCount' data-wrapperid='$wrapperCount' id='wrapper$wrapperCount'>";
+        foreach ($array as $track) {
+            //$number++;
+            $limit++;
+            ?>
+            <div class="col-md-3">
+                <a href="nummer.php?id=<?php echo $track->id ?>">
+                    <div class="options option optionsSmall" href="nummer.php?id=<?php echo $track->id ?>" id="option<?php //echo $number; ?>" data-text="<?php echo $track->title_short; ?>">
+                        <p id="optionSmall"><?php echo mb_strimwidth($track->title_short, 0, 15, '...'); ?></p>
+                    </div>
+                </a>
+            </div>
+
+            <?php
+            if($limit == 14){
+                break;
+            }
+        }
+        echo "</div>";
+        if($wrapperCount == 4){
+            break;
+        }
+    }
+//    echo '<pre>';
+//    print_r($array1);
+//    echo '</pre>';
+    $_SESSION['songs'] = $array1;
+    ?>
     <div class="backBtn col-md-3">
         <a href="javascript:history.back()">
             <div class="options optionBackHome optionsSmall">

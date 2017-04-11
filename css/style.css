@@ -126,9 +126,9 @@ a:hover{
 
 .logo{
     width: 150px;
-    position: relative;
-    top: 100px;
-    right: 35px;
+    /*position: relative;*/
+    /*top: 100px;*/
+    /*right: 35px;*/
 }
 
 .logo:hover{
@@ -201,8 +201,10 @@ a:hover{
 }
 
 .glyphicon{
-    font-size: 60px;
+    font-size: 59px;
 }
+
+
 
 .optionsSong > .glyphicon{
     font-size: 35px;
@@ -261,6 +263,9 @@ a:hover{
     overflow: auto;
 }
 
+#wrapper0{
+    height: 65px;
+}
 .currentSong{
     padding-top: 10px;
     width: 100%;
