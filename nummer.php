@@ -51,8 +51,8 @@ $decoded = json_decode(file_get_contents($track));
     <div class="col-md-6">
         <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=600&height=600&color=007FEB&layout=dark&size=medium&type=tracks&id=<?php echo $id; ?>&app_id=230982" width="500" height="500"></iframe>
     </div>
-    <div class="col-md-6">
-        <div class="col-md-6">
+    <div class="col-md-6 buttonsDiv">
+        <div class="col-md-6 theButton">
             <a href="javascript:history.back()">
                 <div class="options optionsSong optionBackHome">
                     <span class="glyphicon glyphicon-arrow-left test123" aria-hidden="true"></span>
@@ -60,7 +60,7 @@ $decoded = json_decode(file_get_contents($track));
                 </div>
             </a>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 theButton">
             <a href="nummer.php?id=<?php echo $id ?>">
                 <div class="options optionsSong option">
                     <span class="glyphicon glyphicon-pause" onclick="DZ.player.pause(); return false;" aria-hidden="true"></span>
@@ -69,7 +69,7 @@ $decoded = json_decode(file_get_contents($track));
             </a>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 theButton">
             <a href="nummer.php?id=<?php if(isset($_SESSION['songs'])){
                 echo $_SESSION['songs'][array_rand($_SESSION['songs'])];}; ?>">
                 <div class="options optionsSong option optionPrev">
@@ -79,7 +79,7 @@ $decoded = json_decode(file_get_contents($track));
             </a>
 
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 theButton">
             <a href="nummer.php?id=<?php if(isset($_SESSION['songs'])){
                 echo $_SESSION['songs'][array_rand($_SESSION['songs'])];}; ?>">
                 <div class="options optionsSong option optionNext">
@@ -89,7 +89,7 @@ $decoded = json_decode(file_get_contents($track));
             </a>
         </div>
 
-        <div class="col-md-12">
+        <div class="col-md-12 theButton">
             <a href="Voeg-Toe-Favorieten.php?id=<?php echo $id; ?>">
                 <div class="options optionsSong option optionFavorite" data-id="<?php echo $id;?>">
                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -100,13 +100,33 @@ $decoded = json_decode(file_get_contents($track));
 
     </div>
 
+    <div id="dz-root"></div>
+    <div id="controlers">
+        <input type="button" onclick="" value="Play Top Netherlands"/>
+        <br/>
+        <input type="button" onclick="DZ.player.play(); return false;" value="play"/>
+        <input type="button" onclick="DZ.player.pause(); return false;" value="pause"/>
+        <input type="button" onclick="DZ.player.prev(); return false;" value="prev"/>
+        <input type="button" onclick="DZ.player.next(); return false;" value="next"/>
+        <br/>
+        <input type="button" onclick="DZ.player.setVolume(20); return false;" value="set Volume 20"/>
+        <input type="button" onclick="DZ.player.setVolume(80); return false;" value="set Volume 80"/>
+        <br/><br/><br/>
+    </div>
+    <div id="slider_seek" class="progressbarplay" style="">
+        <div class="bar" style="width: 0%;"></div>
+    </div>
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 <script type="text/javascript" src="http://cdn-files.deezer.com/js/min/dz.js"></script>
 <script>
     $(document).ready(function(){
-        $(".col-md-6 .test123").attr('disabled', true);
+        $(window).load(function(){
+            DZ.player.playPlaylist(1266971851); return false;
+        });
+
+        $("#controlers input").attr('disabled', true);
         $("#slider_seek").click(function(evt,arg){
             var left = evt.offsetX;
             console.log(evt.offsetX, $(this).width(), evt.offsetX/$(this).width());
@@ -122,7 +142,7 @@ $decoded = json_decode(file_get_contents($track));
         pre.innerHTML += line.join(' ') + "\n";
     }
     function onPlayerLoaded() {
-        $(".col-md-6 .test123").attr('disabled', false);
+        $("#controlers input").attr('disabled', false);
         event_listener_append('player_loaded');
         DZ.Event.subscribe('current_track', function(arg){
             event_listener_append('current_track', arg.index, arg.track.title, arg.track.album.title);
@@ -134,7 +154,7 @@ $decoded = json_decode(file_get_contents($track));
     }
     DZ.init({
         appId  : '230982',
-        channelUrl : 'http://developers.deezer.com/examples/channel.php',
+        channelUrl : 'http://localhost/KikiDeezer/channel.php',
         player : {
             onload : onPlayerLoaded
         }
