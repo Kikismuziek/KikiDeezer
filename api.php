@@ -11,7 +11,7 @@ if(empty($code)){
     $_SESSION['state'] = md5(uniqid(rand(), TRUE)); //CSRF protection
 
     $dialog_url = "https://connect.deezer.com/oauth/auth.php?app_id=".$app_id
-        ."&redirect_uri=".urlencode($my_url)."&perms=email,offline_access"
+        ."&redirect_uri=".urlencode($my_url)."&perms=basic_access,email,offline_access,listening_history,manage_library"
         ."&state=". $_SESSION['state'];
 
     header("Location: ".$dialog_url);
@@ -29,8 +29,6 @@ if($_REQUEST['state'] == $_SESSION['state']) {
     parse_str($response, $params);
     $api_url   = "https://api.deezer.com/user/me?access_token="
         .$params['access_token'];
-
-    echo $params['access_token'];
 
     $user = json_decode(file_get_contents($api_url));
 }else{
