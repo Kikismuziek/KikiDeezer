@@ -1,15 +1,16 @@
 <?php
 
-include('api.php');
-
-$_SESSION['token'] = $params['access_token'];
-
-if(!isset($_SESSION['token'])){
-    header('Location: api.php');
-}
+$playlist1 = 'http://api.deezer.com/playlist/1266971851';
+$playlist2 = 'http://api.deezer.com/playlist/1125553721';
+$playlist3 = 'http://api.deezer.com/playlist/1352999805';
 
 
+$decoded1 = json_decode(file_get_contents($playlist1));
+$decoded2 = json_decode(file_get_contents($playlist2));
+$decoded3 = json_decode(file_get_contents($playlist3));
 ?>
+
+
 
 <!doctype html>
 <html lang="en">
@@ -18,7 +19,7 @@ if(!isset($_SESSION['token'])){
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Music</title>
+    <title>Nieuwe Muziek</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style.css" type="text/css" rel="stylesheet"/>
 </head>
@@ -30,51 +31,42 @@ if(!isset($_SESSION['token'])){
     </a>
 </div>
 <div class="container">
-    <h1 class="bigTitle">Welkom!</h1>
+    <h1 class="bigTitle">Nieuwe Muziek</h1>
     <div class="col-md-6">
-        <a href="laatst-afgespeeld.php">
+        <a href="Top-Netherlands.php">
             <div class="options" id="option1">
-                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                <!--                    <img class="icon" src="img/002-replay.png" alt="">-->
-                <p id="options">Onlangs afgespeeld</p>
+                <p id="optionsNoIcon"><?php echo $decoded1->title;?></p>
             </div>
         </a>
     </div>
     <div class="col-md-6">
-        <a href="nieuwe-muziek.php">
+        <a href="Top-40-Hits.php">
             <div class="options" id="option2">
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                <!--                    <img class="icon" src="img/Zoek.png" alt="">-->
-                <p id="options">Nieuwe muziek</p>
+                <p id="optionsNoIcon"><?php echo $decoded2->title;?></p>
             </div>
         </a>
     </div>
     <div class="col-md-6">
-        <a href="favorieten.php">
+        <a href="100-Mooie-Liedjes.php">
             <div class="options" id="option3">
-                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                <!--                    <img class="icon" src="img/005-star.png" alt="">-->
-                <p id="options">Favorietenlijst</p>
+                <p id="optionsNoIcon"><?php echo $decoded3->title;?></p>
             </div>
         </a>
     </div>
-
     <div class="col-md-6">
-        <a href="artiesten.php">
-            <div class="options" id="option4">
-                <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
-                <!--                    <img id="elvis" class="icon" src="img/Poppetje.png" alt="">-->
-                <p id="options">Artiesten</p>
+        <a href="index.php">
+            <div class="options optionBackHome" id="option4">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                <p id="options">Terug</p>
             </div>
         </a>
     </div>
-
 </div>
+
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="responsivevoice.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-
 </body>
 </html>
