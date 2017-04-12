@@ -14,15 +14,15 @@ $favorites = json_decode(file_get_contents($favorites_url));
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
-    <div class="container">
+    <div class="container" style="margin-top: 20px">
+        <h1 class="bigTitle" style="float: left;">
+            Mijn favorietenlijst
+        </h1>
         <a href="index.php">
-            <img class="logo pull-right" src="img/Logo.png" alt="">
+            <img class="logo" src="img/Logo.png" style="float: right" alt="">
         </a>
     </div>
-    <div class="container">
-        <h1 class="bigTitle">
-            Mijn Favorietenlijst
-        </h1>
+    <div class="container" style="margin-top: 20px">
         <?php
         $array1 = array();
         foreach ($favorites->data as $f) {
@@ -30,7 +30,7 @@ $favorites = json_decode(file_get_contents($favorites_url));
             <div class="col-md-3">
                 <a href="nummer.php?id=<?php echo $f->id ?>">
                     <div class="options option optionsSmall">
-                        <p id="optionSmall"><?php echo mb_strimwidth($f->title, 0, 15, '...'); ?></p>
+                        <p id="optionSmall"><?php echo mb_strimwidth($f->title, 0, 25, '...'); ?></p>
                     </div>
                 </a>
             </div>

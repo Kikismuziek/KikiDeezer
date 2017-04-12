@@ -25,13 +25,15 @@ $decoded3 = json_decode(file_get_contents($playlist3));
 </head>
 <body>
 
-<div class="container">
+<div class="container" style="margin-top: 20px">
+    <h1 class="bigTitle" style="float: left;">
+        Nieuwe Muziek
+    </h1>
     <a href="index.php">
-        <img class="logo pull-right" src="img/Logo.png" alt="">
+        <img class="logo" src="img/Logo.png" style="float: right" alt="">
     </a>
 </div>
-<div class="container">
-    <h1 class="bigTitle">Nieuwe Muziek</h1>
+<div class="container" style="margin-top: 20px">
     <div class="col-md-6">
         <a href="Top-Netherlands.php">
             <div class="options" id="option1">

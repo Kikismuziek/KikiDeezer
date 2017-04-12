@@ -24,13 +24,13 @@ if(!isset($_SESSION['token'])){
 </head>
 <body>
 
-<div class="container">
+<div class="container" style="margin-top: 20px">
+    <h1 class="bigTitle" style="float: left">Welkom!</h1>
     <a href="index.php">
-        <img class="logo pull-right" src="img/Logo.png" alt="">
+        <img class="logo" src="img/Logo.png" style="float: right;" alt="">
     </a>
 </div>
-<div class="container">
-    <h1 class="bigTitle">Welkom!</h1>
+<div class="container" style="margin-top: 20px">
     <div class="col-md-6">
         <a href="laatst-afgespeeld.php">
             <div class="options" id="option1">
@@ -41,17 +41,8 @@ if(!isset($_SESSION['token'])){
         </a>
     </div>
     <div class="col-md-6">
-        <a href="nieuwe-muziek.php">
-            <div class="options" id="option2">
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                <!--                    <img class="icon" src="img/Zoek.png" alt="">-->
-                <p id="options">Nieuwe muziek</p>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-6">
         <a href="favorieten.php">
-            <div class="options" id="option3">
+            <div class="options" id="option2">
                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                 <!--                    <img class="icon" src="img/005-star.png" alt="">-->
                 <p id="options">Favorietenlijst</p>
@@ -61,10 +52,19 @@ if(!isset($_SESSION['token'])){
 
     <div class="col-md-6">
         <a href="artiesten.php">
-            <div class="options" id="option4">
+            <div class="options" id="option3">
                 <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
                 <!--                    <img id="elvis" class="icon" src="img/Poppetje.png" alt="">-->
                 <p id="options">Artiesten</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a href="nieuwe-muziek.php">
+            <div class="options" id="option4">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <!--                    <img class="icon" src="img/Zoek.png" alt="">-->
+                <p id="options">Nieuwe muziek</p>
             </div>
         </a>
     </div>

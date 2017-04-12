@@ -5,10 +5,14 @@ $id = '';
 if (isset($_GET['id'])) {
     $id = ($_GET['id']);
 
-    $artist_url = "http://api.deezer.com/artist/$id/radio&limit=14";
+    $album_url = "http://api.deezer.com/artist/$id/albums&limit=4";
+    $name_url = "http://api.deezer.com/artist/$id";
 
-    $artist = json_decode(file_get_contents($artist_url));
+    $album = json_decode(file_get_contents($album_url));
+    $name = json_decode(file_get_contents($name_url));
 };
+
+$number = 0;
 
 ?>
 
@@ -24,44 +28,48 @@ if (isset($_GET['id'])) {
     <title>Artiest</title>
 </head>
 <body>
-<div class="container">
+<div class="container" style="margin-top: 20px">
+    <div class="titles" style="float: left;">
+        <h1 class="bigTitle"">
+        <?php echo $name->name ?>
+        </h1>
+        <h2 class="songTitle">
+            Albums
+        </h2>
+    </div>
     <a href="index.php">
-        <img class="logo pull-right" src="img/Logo.png" alt="">
+        <img class="logo" src="img/Logo.png" style="float: right" alt="">
     </a>
 </div>
-<div class="container">
 
-
-    <h1 class="bigTitle"><?php echo $artist->data[0]->artist->name ?></h1>
-
+<div class="container" style="margin-top: 20px">
     <?php
-    $array1 = array();
-    foreach ($artist->data as $a) {
+    foreach ($album->data as $a) {
+        $number++;
         ?>
-        <div class="col-md-3">
-            <a href="nummer.php?id=<?php echo $a->id ?>">
-                <div class="options option optionsSmall">
-                    <p id="optionSmall"><?php echo mb_strimwidth($a->title, 0, 15, '...'); ?></p>
+        <div class="col-md-4">
+            <a href="album.php?id=<?php echo $a->id; ?>">
+                <div class="options optionMiddel" id="option<?php echo $number ?>">
+                    <p id="options"><?php echo $a->title; ?></p>
                 </div>
             </a>
         </div>
         <?php
-        array_push($array1, $a->id);
     }
     ?>
-    <div class="backBtn col-md-3">
-        <a href="artiesten.php">
-            <div class="options optionBackHome optionsSmall">
+    <div class="col-md-4">
+        <a href="index.php">
+            <div class="options optionMiddel optionBackHome" id="option6">
                 <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                <p id="optionSmall">Terug</p>
+                <p id="options">Terug</p>
             </div>
         </a>
     </div>
-    <div class="homeBtn col-md-3">
+    <div class="col-md-4">
         <a href="index.php">
-            <div class="options optionBackHome optionsSmall">
+            <div class="options optionMiddel optionBackHome" id="option6">
                 <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                <p id="optionSmall">Home</p>
+                <p id="options">Home</p>
             </div>
         </a>
     </div>
@@ -69,6 +77,7 @@ if (isset($_GET['id'])) {
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="responsivevoice.js"></script>
+<script type="text/javascript" src="js/scriptArtiesten.js"></script>
 <script type="text/javascript">
     var back = $(".backBtn");
     var home = $(".homeBtn");

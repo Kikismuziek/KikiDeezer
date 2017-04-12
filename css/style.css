@@ -146,7 +146,7 @@ a:hover{
     margin-left: 25px;
     font-weight: 600;
     font-size: 40px;
-    color: #376b9a;
+    color: white;
 }
 
 #ReloadThis {
@@ -181,8 +181,8 @@ a:hover{
 }
 
 .optionBackHome{
-    background-color: #376b9a;
-    color: #e7ea83;
+    background-color: white;
+    color: #d1232a;
 }
 
 #options, #optionsNoIcon {
@@ -193,6 +193,7 @@ a:hover{
 #optionSmall{
     font-size: 2em;
     font-weight: 300;
+    line-height: normal;
 }
 
 #optionsNoIcon{

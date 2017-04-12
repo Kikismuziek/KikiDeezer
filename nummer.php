@@ -36,18 +36,20 @@ $decoded = json_decode(file_get_contents($track));
     <title>Nummer</title>
 </head>
 <body>
-<div class="container">
-    <a href="index.php">
-        <img class="logo pull-right" src="img/Logo.png" alt="">
-    </a>
-</div>
-<div class="container">
-    <h1 class="bigTitle">
+<div class="container" style="margin-top: 20px">
+    <div class="titles" style="float: left;">
+    <h1 class="bigTitle"">
         <?php echo $decoded->artist->name; ?>
     </h1>
     <h2 class="songTitle">
         Gekozen nummer: <?php echo mb_strimwidth($decoded->title, 0, 25, '...'); ?>
     </h2>
+    </div>
+    <a href="index.php">
+        <img class="logo" src="img/Logo.png" style="float: right" alt="">
+    </a>
+</div>
+<div class="container">
     <div class="col-md-6">
         <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=false&width=600&height=600&color=007FEB&layout=dark&size=medium&type=tracks&id=<?php echo $id; ?>&app_id=230982" width="500" height="500"></iframe>
     </div>

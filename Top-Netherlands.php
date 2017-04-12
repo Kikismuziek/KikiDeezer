@@ -28,12 +28,15 @@ $decoded = json_decode(file_get_contents($tracks));
 </head>
 <body>
 
-<div class="container">
+<div class="container" style="margin-top: 20px">
+    <h1 class="bigTitle" style="float: left;">
+        Top Netherlands
+    </h1>
     <a href="index.php">
-        <img class="logo pull-right" src="img/Logo.png" alt="">
+        <img class="logo" src="img/Logo.png" style="float: right" alt="">
     </a>
 </div>
-<div class="container">
+<div class="container" style="margin-top: 20px">
     <?php
     $limit = 0;
     $wrapperCount = 0;
@@ -42,12 +45,6 @@ $decoded = json_decode(file_get_contents($tracks));
         array_push($array1, $aItem->id);
     }
     ?>
-
-    <div class="wrapper wrapper0" data-wrapperid="0" id="wrapper0">
-        <a href="nummer.php?id=<?php echo $array1[array_rand($array1)]; ?>">
-            <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
-        </a>
-    </div>
 
     <?php
     foreach(array_chunk($decoded->data, 4, true) as $array){
@@ -60,13 +57,13 @@ $decoded = json_decode(file_get_contents($tracks));
             <div class="col-md-3">
                 <a href="nummer.php?id=<?php echo $track->id ?>">
                     <div class="options option optionsSmall" href="nummer.php?id=<?php echo $track->id ?>" id="option<?php //echo $number; ?>" data-text="<?php echo $track->title_short; ?>">
-                        <p id="optionSmall"><?php echo mb_strimwidth($track->title_short, 0, 15, '...'); ?></p>
+                        <p id="optionSmall"><?php echo mb_strimwidth($track->title_short, 0, 25, '...'); ?></p>
                     </div>
                 </a>
             </div>
 
             <?php
-            if($limit == 14){
+            if($limit == 13){
                 break;
             }
         }
@@ -81,7 +78,15 @@ $decoded = json_decode(file_get_contents($tracks));
     $_SESSION['songs'] = $array1;
     ?>
     <div class="backBtn col-md-3">
-        <a href="javascript:history.back()">
+        <a href="nummer.php?id=<?php echo $array1[array_rand($array1)]; ?>">
+            <div class="options optionBackHome optionsSmall">
+                <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+                <p id="optionSmall">Shuffle</p>
+            </div>
+        </a>
+    </div>
+    <div class="backBtn col-md-3">
+        <a href="nieuwe-muziek.php">
             <div class="options optionBackHome optionsSmall">
                 <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
                 <p id="optionSmall">Terug</p>

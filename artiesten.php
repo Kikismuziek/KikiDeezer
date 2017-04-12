@@ -16,15 +16,15 @@ $number = 0;
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
-    <div class="container">
-        <a href="index.php">
-            <img class="logo pull-right" src="img/Logo.png" alt="">
-        </a>
-    </div>
-    <div class="container">
-        <h1 class="bigTitle">
+    <div class="container" style="margin-top: 20px">
+        <h1 class="bigTitle" style="float: left;">
             Artiesten
         </h1>
+        <a href="index.php">
+            <img class="logo" src="img/Logo.png" style="float: right" alt="">
+        </a>
+    </div>
+    <div class="container" style="margin-top: 20px">
         <?php
         foreach ($artists->data as $a) {
             $number++;

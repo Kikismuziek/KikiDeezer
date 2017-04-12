@@ -38,8 +38,8 @@ function countdown() {
                     document.getElementById(names).style.backgroundColor = '#e7ea83';
                     document.getElementById(names).style.color = '#d1232a';
                     document.getElementById(names).className = "options";
-                    document.getElementById("option6").style.backgroundColor = '#376b9a';
-                    document.getElementById("option6").style.color = '#e7ea83';
+                    document.getElementById("option6").style.backgroundColor = 'white';
+                    document.getElementById("option6").style.color = '#d1232a';
                 }
                 document.getElementById('option' + amountElements).style.backgroundColor = '#d1232a';
                 document.getElementById('option' + amountElements).style.color = '#e7ea83';
