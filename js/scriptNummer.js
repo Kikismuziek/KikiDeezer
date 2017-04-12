@@ -18,8 +18,6 @@ function countdown() {
     document.getElementById('option1').style.backgroundColor = '#d1232a';
     document.getElementById('option1').style.color = '#e7ea83';
     document.getElementById('option1').className += " active";
-    var speak = document.getElementById('option1').textContent;
-    responsiveVoice.speak(speak, "Dutch Female");
 
     var amountElements = 1;
     var counting = true;
@@ -37,13 +35,13 @@ function countdown() {
                     names = elements[i].id;
                     document.getElementById(names).style.backgroundColor = '#e7ea83';
                     document.getElementById(names).style.color = '#d1232a';
-                    document.getElementById(names).className = "options"
+                    document.getElementById(names).className = "options optionsSong option";
+                    document.getElementById("option1").style.backgroundColor = '#376b9a';
+                    document.getElementById("option1").style.color = '#e7ea83';
                 }
                 document.getElementById('option' + amountElements).style.backgroundColor = '#d1232a';
                 document.getElementById('option' + amountElements).style.color = '#e7ea83';
                 document.getElementById('option' + amountElements).className += " active";
-                var speak = document.getElementById('option' + amountElements).textContent;
-                responsiveVoice.speak(speak, "Dutch Female");
                 counting = false;
                 counting = true;
 

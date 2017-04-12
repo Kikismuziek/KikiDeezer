@@ -20,8 +20,8 @@ $decoded3 = json_decode(file_get_contents($playlist3));
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nieuwe Muziek</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
 
@@ -67,6 +67,6 @@ $decoded3 = json_decode(file_get_contents($playlist3));
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="responsivevoice.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/scriptTerug.js"></script>
 </body>
 </html>
