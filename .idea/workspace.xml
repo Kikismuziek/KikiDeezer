@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2721ef41-61b8-4a9c-af80-f43f21b62cc0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Top-Netherlands.php" afterPath="$PROJECT_DIR$/Top-Netherlands.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artiest.php" afterPath="$PROJECT_DIR$/artiest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artiesten.php" afterPath="$PROJECT_DIR$/artiesten.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/favorieten.php" afterPath="$PROJECT_DIR$/favorieten.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scriptArtiesten.js" afterPath="$PROJECT_DIR$/js/scriptArtiesten.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scriptNummer.js" afterPath="$PROJECT_DIR$/js/scriptNummer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scriptTerug.js" afterPath="$PROJECT_DIR$/js/scriptTerug.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laatst-afgespeeld.php" afterPath="$PROJECT_DIR$/laatst-afgespeeld.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nieuwe-muziek.php" afterPath="$PROJECT_DIR$/nieuwe-muziek.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shuffle-Afspeellijst.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api.php" afterPath="$PROJECT_DIR$/api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nummer.php" afterPath="$PROJECT_DIR$/nummer.php" />
     </list>
     <ignored path="KikiDeezer.iws" />
@@ -60,16 +50,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nummer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nummer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nummer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="50" column="6" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="50" selection-end-column="6" />
+            <state relative-caret-position="367">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scriptPlaylist.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scriptPlaylist.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/scriptPlaylist.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="564">
@@ -105,7 +95,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="630">
               <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-              <folding />
+              <folding>
+                <marker date="1492021568094" expanded="true" signature="609:1012" ph="..." />
+                <marker date="1492021568094" expanded="true" signature="1018:1087" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="543">
-              <caret line="62" column="4" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
+              <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -163,7 +156,6 @@
       <find>width: 15</find>
       <find>width: 1</find>
       <find>width:15</find>
-      <find>width:</find>
       <find>#options</find>
       <find>gl</find>
       <find>r</find>
@@ -186,7 +178,6 @@
         <option value="$PROJECT_DIR$/nieuwe-muziek.php" />
         <option value="$PROJECT_DIR$/js/scriptArtiesten.js" />
         <option value="$PROJECT_DIR$/js/scriptNummer.js" />
-        <option value="$PROJECT_DIR$/nummer.php" />
         <option value="$PROJECT_DIR$/js/scriptTerug.js" />
         <option value="$PROJECT_DIR$/artiest.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
@@ -196,6 +187,7 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/laatst-afgespeeld.php" />
         <option value="$PROJECT_DIR$/js/scriptPlaylist.js" />
+        <option value="$PROJECT_DIR$/nummer.php" />
       </list>
     </option>
   </component>
@@ -454,12 +446,12 @@
       <workItem from="1491480929829" duration="1832000" />
       <workItem from="1491754844854" duration="3307000" />
       <workItem from="1491903461682" duration="8428000" />
-      <workItem from="1491988642076" duration="20320000" />
+      <workItem from="1491988642076" duration="20550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33887000" />
+    <option name="totallyTimeSpent" value="34117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -805,19 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nummer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="50" column="6" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="50" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/artiest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -856,7 +835,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding />
+          <folding>
+            <marker date="1492021568094" expanded="true" signature="609:1012" ph="..." />
+            <marker date="1492021568094" expanded="true" signature="1018:1087" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -897,7 +879,7 @@
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
-          <caret line="62" column="4" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
+          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
@@ -917,6 +899,19 @@
         <state relative-caret-position="564">
           <caret line="198" column="68" lean-forward="false" selection-start-line="198" selection-start-column="68" selection-end-line="198" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nummer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
