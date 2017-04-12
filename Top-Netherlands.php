@@ -47,6 +47,10 @@ $count = 0;
     <div class="wrapper wrapper4" id="wrapper4">
     </div>
     <?php
+    $array1 = array();
+    foreach ($tracks->data as $aItem){
+        array_push($array1, $aItem->id);
+    }
     foreach ($tracks->data as $t) {
         $count++;
         ?>

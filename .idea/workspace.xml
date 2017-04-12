@@ -4,11 +4,6 @@
     <list default="true" id="2721ef41-61b8-4a9c-af80-f43f21b62cc0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Top-Netherlands.php" afterPath="$PROJECT_DIR$/Top-Netherlands.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/album.php" afterPath="$PROJECT_DIR$/album.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/favorieten.php" afterPath="$PROJECT_DIR$/favorieten.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scriptPlaylist.js" afterPath="$PROJECT_DIR$/js/scriptPlaylist.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laatst-afgespeeld.php" afterPath="$PROJECT_DIR$/laatst-afgespeeld.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nummer.php" afterPath="$PROJECT_DIR$/nummer.php" />
     </list>
     <ignored path="KikiDeezer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,14 +27,14 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="924">
               <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="album.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="album.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/album.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="671">
@@ -91,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Top-Netherlands.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Top-Netherlands.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Top-Netherlands.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="62" column="4" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="69" selection-end-column="10" />
+            <state relative-caret-position="414">
+              <caret line="50" column="20" lean-forward="false" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -197,10 +192,10 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/nummer.php" />
         <option value="$PROJECT_DIR$/js/scriptPlaylist.js" />
-        <option value="$PROJECT_DIR$/Top-Netherlands.php" />
         <option value="$PROJECT_DIR$/laatst-afgespeeld.php" />
         <option value="$PROJECT_DIR$/album.php" />
         <option value="$PROJECT_DIR$/favorieten.php" />
+        <option value="$PROJECT_DIR$/Top-Netherlands.php" />
       </list>
     </option>
   </component>
@@ -459,12 +454,12 @@
       <workItem from="1491480929829" duration="1832000" />
       <workItem from="1491754844854" duration="3307000" />
       <workItem from="1491903461682" duration="8428000" />
-      <workItem from="1491988642076" duration="25519000" />
+      <workItem from="1491988642076" duration="26753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39086000" />
+    <option name="totallyTimeSpent" value="40320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -852,14 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nummer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
@@ -894,6 +881,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/album.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="77" column="57" lean-forward="false" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/favorieten.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="786">
@@ -904,24 +904,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Top-Netherlands.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="62" column="4" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="69" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="924">
+          <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/album.php">
+    <entry file="file://$PROJECT_DIR$/Top-Netherlands.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="77" column="57" lean-forward="false" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+        <state relative-caret-position="414">
+          <caret line="50" column="20" lean-forward="false" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
