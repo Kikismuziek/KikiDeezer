@@ -2,7 +2,7 @@
 session_start();
 
 $history_url = "http://api.deezer.com/user/me/history?access_token="
-    .$_SESSION['token']."&limit=14";
+    .$_SESSION['token']."&limit=13";
 
 $history = json_decode(file_get_contents($history_url));
 $count = 0;
@@ -48,16 +48,24 @@ $count = 0;
         }
         ?>
         <div class="backBtn col-md-3" id="<?php echo $count+1 ?>">
+            <a href="nummer.php?id=<?php echo $array1[array_rand($array1)]; ?>">
+                <div class="options optionBackHome optionsSmall" id="option<?php echo $count+1?>">
+                    <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+                    <p id="optionSmall">Shuffle</p>
+                </div>
+            </a>
+        </div>
+        <div class="backBtn col-md-3" id="<?php echo $count+2 ?>">
             <a href="index.php">
-                <div class="options optionBackHome optionsSmall">
+                <div class="options optionBackHome optionsSmall" id="option<?php echo $count+2?>">
                     <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
                     <p id="optionSmall">Terug</p>
                 </div>
             </a>
         </div>
-        <div class="homeBtn col-md-3" id="<?php echo $count+2 ?>">
+        <div class="homeBtn col-md-3" id="<?php echo $count+3 ?>">
             <a href="index.php">
-                <div class="options optionBackHome optionsSmall">
+                <div class="options optionBackHome optionsSmall" id="option<?php echo $count+3?>">
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                     <p id="optionSmall">Home</p>
                 </div>

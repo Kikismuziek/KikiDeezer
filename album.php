@@ -5,14 +5,14 @@ $id = '';
 if (isset($_GET['id'])) {
     $id = ($_GET['id']);
 
-    $tracks_url = "http://api.deezer.com/album/$id/tracks&limit=14";
+    $tracks_url = "http://api.deezer.com/album/$id/tracks&limit=13";
     $name_url = "http://api.deezer.com/album/$id";
 
     $tracks = json_decode(file_get_contents($tracks_url));
     $name = json_decode(file_get_contents($name_url));
 };
 
-$number = 0;
+$count = 0;
 
 ?>
 <!DOCTYPE html>
@@ -36,32 +36,48 @@ $number = 0;
         <img class="logo" src="img/Logo.png" style="float: right" alt="">
     </a>
 </div>
-<div class="container" style="margin-top: 20px"><?php
-    $array1 = array();
+<div class="container" style="margin-top: 20px">
+    <div class="wrapper wrapper1" id="wrapper1">
+    </div>
+    <div class="wrapper wrapper2" id="wrapper2">
+    </div>
+    <div class="wrapper wrapper3" id="wrapper3">
+    </div>
+    <div class="wrapper wrapper4" id="wrapper4">
+    </div>
+    <?php
     foreach ($tracks->data as $t) {
+        $count++;
         ?>
-        <div class="col-md-3">
+        <div class="col-md-3" id="<?php echo $count ?>">
             <a href="nummer.php?id=<?php echo $t->id ?>">
-                <div class="options option optionsSmall">
-                    <p id="optionSmall"><?php echo mb_strimwidth($t->title, 0, 25, '...'); ?></p>
+                <div class="options optionsSmall" id="option<?php echo $count?>">
+                    <p id="optionSmall"><?php echo mb_strimwidth($t->title, 0, 15, '...'); ?></p>
                 </div>
             </a>
         </div>
         <?php
-        array_push($array1, $t->id);
     }
     ?>
-    <div class="backBtn col-md-3">
-        <a href="javascript:history.back()">
-            <div class="options optionBackHome optionsSmall">
+    <div class="backBtn col-md-3" id="<?php echo $count+1 ?>">
+        <a href="nummer.php?id=<?php echo $array1[array_rand($array1)]; ?>">
+            <div class="options optionBackHome optionsSmall" id="option<?php echo $count+1?>">
+                <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+                <p id="optionSmall">Shuffle</p>
+            </div>
+        </a>
+    </div>
+    <div class="backBtn col-md-3" id="<?php echo $count+2 ?>">
+        <a href="index.php">
+            <div class="options optionBackHome optionsSmall" id="option<?php echo $count+2?>">
                 <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
                 <p id="optionSmall">Terug</p>
             </div>
         </a>
     </div>
-    <div class="homeBtn col-md-3">
+    <div class="homeBtn col-md-3" id="<?php echo $count+3 ?>">
         <a href="index.php">
-            <div class="options optionBackHome optionsSmall">
+            <div class="options optionBackHome optionsSmall" id="option<?php echo $count+3?>">
                 <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                 <p id="optionSmall">Home</p>
             </div>
@@ -71,6 +87,6 @@ $number = 0;
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="responsivevoice.js"></script>
-<script type="text/javascript" src="js/scriptArtiesten.js"></script>
+<script type="text/javascript" src="js/scriptPlaylist.js"></script>
 </body>
 </html>

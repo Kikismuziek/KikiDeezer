@@ -169,13 +169,21 @@ $(function () {
                             option++;
                             amountElements2 += 1;
                             var elements2 = document.getElementsByClassName(wrapper);
+                            var elements3 = document.getElementsByClassName("options").length;
+                            var elements4 = elements3-1;
+
                             var names2 = '';
                             for (var i = 0; i < elements2.length; i++) {
                                 number2++;
                                 names2 = elements2[i].id;
+
                                 document.getElementById("option" +names2).style.backgroundColor = '#e7ea83';
                                 document.getElementById("option" +names2).style.color = '#d1232a';
                                 document.getElementById("option" +names2).className = "options optionsSmall";
+                                document.getElementById("option" +elements3).style.backgroundColor = "white";
+                                document.getElementById("option" +elements3).style.color = "#d1232a";
+                                document.getElementById("option" +elements4).style.backgroundColor = "white";
+                                document.getElementById("option" +elements4).style.color = "#d1232a";
                             }
                             document.getElementById("option" +option).style.backgroundColor = '#d1232a';
                             document.getElementById("option" +option).style.color = '#e7ea83';
@@ -185,7 +193,7 @@ $(function () {
 
                             if (amountElements2 == elements2.length) {
                                 amountElements2 = 0;
-                                option -= 4;
+                                option -= document.getElementsByClassName("wrapperOptions4").length;
                             }
                         }
                         count2 = 5;

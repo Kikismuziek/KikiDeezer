@@ -43,26 +43,19 @@ $arraySongs = $_SESSION['songs'];
 
 <div class="container" style="margin-top: 20px">
     <div class="titles" style="float: left;">
-    <h1 class="bigTitle"">
-
-<div class="container">
-    <a href="index.php">
-        <img class="logo pull-right" src="img/Logo.png" alt="">
-    </a>
-</div>
-<div class="container">
-    <h1 class="bigTitle" id="bigT">
-
-        <?php echo $decoded->artist->name; ?>
-    </h1>
-    <h2 class="songTitle" id="songT">
-        Gekozen nummer: <?php echo mb_strimwidth($decoded->title, 0, 25, '...'); ?>
-    </h2>
+        <h1 class="bigTitle">
+            <?php echo $decoded->artist->name ?>
+        </h1>
+        <h2 class="songTitle">
+            Gekozen nummer: <?php echo $decoded->title?>
+        </h2>
     </div>
     <a href="index.php">
         <img class="logo" src="img/Logo.png" style="float: right" alt="">
     </a>
 </div>
+
+
 <div class="container">
     <div class="col-md-6">
         <div id="dz-root"></div>
