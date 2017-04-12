@@ -31,8 +31,8 @@ $decoded = json_decode(file_get_contents($track));
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Nummer</title>
 </head>
 <body>
@@ -49,12 +49,12 @@ $decoded = json_decode(file_get_contents($track));
         Gekozen nummer: <?php echo mb_strimwidth($decoded->title, 0, 25, '...'); ?>
     </h2>
     <div class="col-md-6">
-        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=600&height=600&color=007FEB&layout=dark&size=medium&type=tracks&id=<?php echo $id; ?>&app_id=230982" width="500" height="500"></iframe>
+        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=false&width=600&height=600&color=007FEB&layout=dark&size=medium&type=tracks&id=<?php echo $id; ?>&app_id=230982" width="500" height="500"></iframe>
     </div>
     <div class="col-md-6 buttonsDiv">
         <div class="col-md-6 theButton">
             <a href="javascript:history.back()">
-                <div class="options optionsSong optionBackHome">
+                <div class="options optionsSong optionBackHome" id="option1">
                     <span class="glyphicon glyphicon-arrow-left test123" aria-hidden="true"></span>
                     <p id="options">Terug</p>
                 </div>
@@ -62,7 +62,7 @@ $decoded = json_decode(file_get_contents($track));
         </div>
         <div class="col-md-6 theButton">
             <a href="nummer.php?id=<?php echo $id ?>">
-                <div class="options optionsSong option">
+                <div class="options optionsSong option" id="option2">
                     <span class="glyphicon glyphicon-pause" onclick="DZ.player.pause(); return false;" aria-hidden="true"></span>
                     <p id="options">Pauze</p>
                 </div>
@@ -72,7 +72,7 @@ $decoded = json_decode(file_get_contents($track));
         <div class="col-md-6 theButton">
             <a href="nummer.php?id=<?php if(isset($_SESSION['songs'])){
                 echo $_SESSION['songs'][array_rand($_SESSION['songs'])];}; ?>">
-                <div class="options optionsSong option optionPrev">
+                <div class="options optionsSong option optionPrev" id="option3">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     <p id="options">Vorig nummer</p>
                 </div>
@@ -82,7 +82,7 @@ $decoded = json_decode(file_get_contents($track));
         <div class="col-md-6 theButton">
             <a href="nummer.php?id=<?php if(isset($_SESSION['songs'])){
                 echo $_SESSION['songs'][array_rand($_SESSION['songs'])];}; ?>">
-                <div class="options optionsSong option optionNext">
+                <div class="options optionsSong option optionNext" id="option4">
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     <p id="options">Volgend nummer</p>
                 </div>
@@ -91,7 +91,7 @@ $decoded = json_decode(file_get_contents($track));
 
         <div class="col-md-12 theButton">
             <a href="Voeg-Toe-Favorieten.php?id=<?php echo $id; ?>">
-                <div class="options optionsSong option optionFavorite" data-id="<?php echo $id;?>">
+                <div class="options optionsSong option optionFavorite" id="option5" data-id="<?php echo $id;?>">
                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                     <p id="options">Toevoegen favoriet</p>
                 </div>
@@ -162,6 +162,6 @@ $decoded = json_decode(file_get_contents($track));
 </script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="responsivevoice.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/scriptNummer.js"></script>
 </body>
 </html>
