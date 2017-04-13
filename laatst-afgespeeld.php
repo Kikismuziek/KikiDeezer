@@ -34,6 +34,10 @@ $count = 0;
         <div class="wrapper wrapper4" id="wrapper4">
         </div>
         <?php
+        $array1 = array();
+        foreach ($history->data as $aItem){
+            array_push($array1, $aItem->id);
+        }
         foreach ($history->data as $h) {
             $count++;
             ?>
@@ -46,6 +50,7 @@ $count = 0;
             </div>
             <?php
         }
+        $_SESSION['songs'] = $array1;
         ?>
         <div class="backBtn col-md-3" id="<?php echo $count+1 ?>">
             <a href="Shuffle-Afspeellijst.php?id=<?php echo $array1[array_rand($array1)]; ?>">

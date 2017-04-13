@@ -66,7 +66,7 @@ $count = 0;
     $_SESSION['songs'] = $array1;
     ?>
     <div class="backBtn col-md-3" id="<?php echo $count+1 ?>">
-        <a href="nummer.php?id=<?php echo $array1[array_rand($array1)]; ?>">
+        <a href="Shuffle-Afspeellijst.php?id=<?php echo $array1[array_rand($array1)]; ?>">
             <div class="options optionBackHome optionsSmall" id="option<?php echo $count+1?>">
                 <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
                 <p id="optionSmall">Shuffle</p>

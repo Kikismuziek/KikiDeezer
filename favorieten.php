@@ -34,6 +34,10 @@ $count = 0;
         <div class="wrapper wrapper4" id="wrapper4">
         </div>
         <?php
+        $array1 = array();
+        foreach ($favorites->data as $aItem){
+            array_push($array1, $aItem->id);
+        }
         foreach ($favorites->data as $f) {
             $count++;
             ?>
@@ -46,9 +50,10 @@ $count = 0;
             </div>
             <?php
         }
+        $_SESSION['songs'] = $array1;
         ?>
         <div class="backBtn col-md-3" id="<?php echo $count+1 ?>">
-            <a href="nummer.php?id=<?php echo $array1[array_rand($array1)]; ?>">
+            <a href="Shuffle-Afspeellijst.php?id=<?php echo $array1[array_rand($array1)]; ?>">
                 <div class="options optionBackHome optionsSmall" id="option<?php echo $count+1?>">
                     <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
                     <p id="optionSmall">Shuffle</p>

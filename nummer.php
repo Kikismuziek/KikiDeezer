@@ -26,6 +26,9 @@ $decoded = json_decode(file_get_contents($track));
 
 $arraySongs = $_SESSION['songs'];
 
+$res = array_slice($arraySongs, 0, 0, true) +
+    array("0" => $id) +
+    array_slice($arraySongs, 1, count($arraySongs) - 1, true) ;
 ?>
 
 <!doctype html>
@@ -73,8 +76,8 @@ $arraySongs = $_SESSION['songs'];
         </div>
         <div class="col-md-6 theButton">
             <a href="nummer.php?id=<?php echo $id ?>">
-                <div class="options optionsSong option" onclick="DZ.player.pause(); return false;" id="option2">
-                    <span class="glyphicon glyphicon-pause" onclick="DZ.player.pause(); return false;" aria-hidden="true"></span>
+                <div class="options optionsSong option" onclick="togglePlay(); return false;" id="option2">
+                    <span class="glyphicon glyphicon-pause" onclick="togglePlay(); return false;" aria-hidden="true"></span>
                     <p id="options">Pauze</p>
                 </div>
             </a>
@@ -83,7 +86,7 @@ $arraySongs = $_SESSION['songs'];
         <div class="col-md-6 theButton">
             <a href="nummer.php?id=<?php if(isset($_SESSION['songs'])){
                 echo $_SESSION['songs'][array_rand($_SESSION['songs'])];}; ?>">
-                <div class="options optionsSong option optionPrev" onclick="DZ.player.prev(); return false;" id="option3">
+                <div class="options optionsSong option optionPrev" onclick="DZ.player.prev();" id="option3">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     <p id="options">Vorig nummer</p>
                 </div>
@@ -93,7 +96,7 @@ $arraySongs = $_SESSION['songs'];
         <div class="col-md-6 theButton">
             <a href="nummer.php?id=<?php if(isset($_SESSION['songs'])){
                 echo $_SESSION['songs'][array_rand($_SESSION['songs'])];}; ?>">
-                <div class="options optionsSong option optionNext" onclick="DZ.player.next(); return false;" id="option4">
+                <div class="options optionsSong option optionNext" onclick="DZ.player.next();" id="option4">
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     <p id="options">Volgend nummer</p>
                 </div>
@@ -113,6 +116,19 @@ $arraySongs = $_SESSION['songs'];
 
     </div>
 </div>
+<script>
+    var isPlaying = true;
+
+    function togglePlay() {
+        if (isPlaying) {
+            DZ.player.pause();
+            isPlaying = false;
+        } else {
+            DZ.player.play();
+            isPlaying = true;
+        }
+    }
+</script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 <script type="text/javascript" src="http://cdn-files.deezer.com/js/min/dz.js"></script>
@@ -128,8 +144,7 @@ $arraySongs = $_SESSION['songs'];
         <?php } ?>
 
         $(window).load(function(){
-            $('.hiddenField').click();
-            DZ.player.playTracks(pausecontent); return false;
+            DZ.player.playTracks([<?php echo $id ?>]); return false;
         });
 
         $(".col-md-6 .optionsSong").attr('disabled', true);

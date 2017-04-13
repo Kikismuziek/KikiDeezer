@@ -56,6 +56,7 @@ function countdown() {
     document.body.onkeyup = function (e) {
         if (e.keyCode == 32) {
             var active = document.getElementsByClassName("active")[0].id;
+            count = 5;
 
             document.getElementById(active).click();
         }

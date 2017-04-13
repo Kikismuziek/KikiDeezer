@@ -46,11 +46,15 @@ $count = 0;
     <div class="wrapper wrapper4" id="wrapper4">
     </div>
     <?php
+    $array1 = array();
+    foreach ($tracks->data as $aItem){
+        array_push($array1, $aItem->id);
+    }
     foreach ($tracks->data as $t) {
         $count++;
         ?>
         <div class="col-md-3" id="<?php echo $count ?>">
-            <a href="nummer.php?id=<?php echo $t->id ?>">
+            <a href="Shuffle-Afspeellijst.php?id=<?php echo $t->id ?>">
                 <div class="options optionsSmall" id="option<?php echo $count?>">
                     <p id="optionSmall"><?php echo mb_strimwidth($t->title, 0, 15, '...'); ?></p>
                 </div>
@@ -58,6 +62,7 @@ $count = 0;
         </div>
         <?php
     }
+    $_SESSION['songs'] = $array1;
     ?>
     <div class="backBtn col-md-3" id="<?php echo $count+1 ?>">
         <a href="nummer.php?id=<?php echo $array1[array_rand($array1)]; ?>">
