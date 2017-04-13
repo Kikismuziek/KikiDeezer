@@ -109,6 +109,8 @@ $arraySongs = $_SESSION['songs'];
             </a>
         </div>
 
+        <input class="hiddenField" type="hidden" onclick="DZ.player.setShuffle(true); return false;" value="play"/>
+
     </div>
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -126,6 +128,7 @@ $arraySongs = $_SESSION['songs'];
         <?php } ?>
 
         $(window).load(function(){
+            $('.hiddenField').click();
             DZ.player.playTracks(pausecontent); return false;
         });
 
