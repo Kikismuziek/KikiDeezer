@@ -42,8 +42,6 @@ function countdown() {
                 document.getElementById('option' + amountElements).style.backgroundColor = '#d1232a';
                 document.getElementById('option' + amountElements).style.color = '#e7ea83';
                 document.getElementById('option' + amountElements).className += " active";
-                counting = false;
-                counting = true;
 
                 if (amountElements == elements.length) {
                     amountElements = 0;
@@ -52,16 +50,12 @@ function countdown() {
             count = 5;
         }
 
-        var counting2 = true;
-        var count2 = 0;
-        var timerId2;
 
     }, 1000);
 
     document.body.onkeyup = function (e) {
         if (e.keyCode == 32) {
             var active = document.getElementsByClassName("active")[0].id;
-            count = 0;
 
             document.getElementById(active).click();
         }

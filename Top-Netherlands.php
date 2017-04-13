@@ -63,6 +63,7 @@ $count = 0;
         </div>
         <?php
     }
+    $_SESSION['songs'] = $array1;
     ?>
     <div class="backBtn col-md-3" id="<?php echo $count+1 ?>">
         <a href="nummer.php?id=<?php echo $array1[array_rand($array1)]; ?>">

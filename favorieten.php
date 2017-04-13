@@ -57,7 +57,7 @@ $count = 0;
         </div>
         <div class="backBtn col-md-3" id="<?php echo $count+2 ?>">
             <a href="index.php">
-                <div class="options optionBackHome optionsSmall" id="option<?php echo $count+1?>">
+                <div class="options optionBackHome optionsSmall" id="option<?php echo $count+2?>">
                     <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
                     <p id="optionSmall">Terug</p>
                 </div>
@@ -65,7 +65,7 @@ $count = 0;
         </div>
         <div class="homeBtn col-md-3" id="<?php echo $count+3 ?>">
             <a href="index.php">
-                <div class="options optionBackHome optionsSmall" id="option<?php echo $count+2?>">
+                <div class="options optionBackHome optionsSmall" id="option<?php echo $count+3?>">
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                     <p id="optionSmall">Home</p>
                 </div>
