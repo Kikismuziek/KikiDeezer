@@ -171,6 +171,7 @@ $(function () {
                             var elements2 = document.getElementsByClassName(wrapper);
                             var elements3 = document.getElementsByClassName("options").length;
                             var elements4 = elements3-1;
+                            var elements5 = elements3-2;
 
                             var names2 = '';
                             for (var i = 0; i < elements2.length; i++) {
@@ -184,6 +185,8 @@ $(function () {
                                 document.getElementById("option" +elements3).style.color = "#d1232a";
                                 document.getElementById("option" +elements4).style.backgroundColor = "white";
                                 document.getElementById("option" +elements4).style.color = "#d1232a";
+                                document.getElementById("option" +elements5).style.backgroundColor = "white";
+                                document.getElementById("option" +elements5).style.color = "#d1232a";
                             }
                             document.getElementById("option" +option).style.backgroundColor = '#d1232a';
                             document.getElementById("option" +option).style.color = '#e7ea83';
