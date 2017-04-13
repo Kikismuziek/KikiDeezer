@@ -6,7 +6,7 @@ $artists_url = "http://api.deezer.com/user/me/artists?access_token="
 
 $artists = json_decode(file_get_contents($artists_url));
 
-$number = 0;
+$number = 1;
 ?>
     <!DOCTYPE html>
     <html>
@@ -25,6 +25,14 @@ $number = 0;
         </a>
     </div>
     <div class="container" style="margin-top: 20px">
+        <div class="col-md-4">
+            <a href="index.php">
+                <div class="options optionMiddel optionBackHome" id="option1">
+                    <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                    <p id="options">Terug</p>
+                </div>
+            </a>
+        </div>
         <?php
         foreach ($artists->data as $a) {
             $number++;
@@ -39,14 +47,6 @@ $number = 0;
             <?php
         }
         ?>
-        <div class="col-md-4">
-            <a href="index.php">
-                <div class="options optionMiddel optionBackHome" id="option6">
-                    <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                    <p id="options">Terug</p>
-                </div>
-            </a>
-        </div>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>

@@ -35,31 +35,31 @@ $decoded3 = json_decode(file_get_contents($playlist3));
 </div>
 <div class="container" style="margin-top: 20px">
     <div class="col-md-6">
+        <a href="index.php">
+            <div class="options optionBackHome" id="option1">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                <p id="options">Terug</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-6">
         <a href="Top-Netherlands.php">
-            <div class="options" id="option1">
+            <div class="options" id="option2">
                 <p id="optionsNoIcon"><?php echo $decoded1->title;?></p>
             </div>
         </a>
     </div>
     <div class="col-md-6">
         <a href="Top-40-Hits.php">
-            <div class="options" id="option2">
+            <div class="options" id="option3">
                 <p id="optionsNoIcon"><?php echo $decoded2->title;?></p>
             </div>
         </a>
     </div>
     <div class="col-md-6">
         <a href="100-Mooie-Liedjes.php">
-            <div class="options" id="option3">
+            <div class="options" id="option4">
                 <p id="optionsNoIcon"><?php echo $decoded3->title;?></p>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-6">
-        <a href="index.php">
-            <div class="options optionBackHome" id="option4">
-                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                <p id="options">Terug</p>
             </div>
         </a>
     </div>

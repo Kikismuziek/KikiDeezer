@@ -2,7 +2,7 @@
 
 $app_id     = "230982";
 $app_secret = "b73116acd60c5b4ab8f549f53eb81ea3";
-$my_url     = "http://localhost/KikiDeezer/index.php";
+$my_url     = "http://project.cmi.hr.nl/2016_2017/mlab1_dfo_t2/prototype/index.php";
 
 session_start();
 $code = $_REQUEST["code"];

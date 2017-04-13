@@ -104,7 +104,7 @@ $res = array_slice($arraySongs, 0, 0, true) +
         </div>
 
         <div class="col-md-12 theButton">
-            <a href="Voeg-Toe-Favorieten.php?id=<?php echo $id; ?>">
+            <a href="nummer.php?id=<?php echo $id; ?>">
                 <div class="options optionsSong option optionFavorite" id="option5" data-id="<?php echo $id;?>">
                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                     <p id="options">Toevoegen favoriet</p>

@@ -40,6 +40,8 @@ function countdown() {
                     document.getElementById(names).className = "options";
                     document.getElementById("option1").style.backgroundColor = 'white';
                     document.getElementById("option1").style.color = '#d1232a';
+                    document.getElementById("option2").style.backgroundColor = 'white';
+                    document.getElementById("option2").style.color = '#d1232a';
                 }
                 document.getElementById('option' + amountElements).style.backgroundColor = '#d1232a';
                 document.getElementById('option' + amountElements).style.color = '#e7ea83';

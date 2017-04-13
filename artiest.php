@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
     $name = json_decode(file_get_contents($name_url));
 };
 
-$number = 0;
+$number = 2;
 
 ?>
 
@@ -43,6 +43,22 @@ $number = 0;
 </div>
 
 <div class="container" style="margin-top: 20px">
+    <div class="col-md-4">
+        <a href="index.php">
+            <div class="options optionMiddel optionBackHome" id="option1">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                <p id="options">Terug</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="index.php">
+            <div class="options optionMiddel optionBackHome" id="option2">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                <p id="options">Home</p>
+            </div>
+        </a>
+    </div>
     <?php
     foreach ($album->data as $a) {
         $number++;
@@ -57,27 +73,11 @@ $number = 0;
         <?php
     }
     ?>
-    <div class="col-md-4">
-        <a href="index.php">
-            <div class="options optionMiddel optionBackHome" id="option6">
-                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                <p id="options">Terug</p>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="index.php">
-            <div class="options optionMiddel optionBackHome" id="option6">
-                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                <p id="options">Home</p>
-            </div>
-        </a>
-    </div>
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="responsivevoice.js"></script>
-<script type="text/javascript" src="js/scriptArtiesten.js"></script>
+<script type="text/javascript" src="js/scriptArtiest.js"></script>
 <script type="text/javascript">
     var back = $(".backBtn");
     var home = $(".homeBtn");

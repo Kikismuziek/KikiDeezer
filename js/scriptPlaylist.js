@@ -181,12 +181,12 @@ $(function () {
                                 document.getElementById("option" +names2).style.backgroundColor = '#e7ea83';
                                 document.getElementById("option" +names2).style.color = '#d1232a';
                                 document.getElementById("option" +names2).className = "options optionsSmall";
-                                document.getElementById("option" +elements3).style.backgroundColor = "white";
-                                document.getElementById("option" +elements3).style.color = "#d1232a";
-                                document.getElementById("option" +elements4).style.backgroundColor = "white";
-                                document.getElementById("option" +elements4).style.color = "#d1232a";
-                                document.getElementById("option" +elements5).style.backgroundColor = "white";
-                                document.getElementById("option" +elements5).style.color = "#d1232a";
+                                document.getElementById("option1").style.backgroundColor = "white";
+                                document.getElementById("option1").style.color = "#d1232a";
+                                document.getElementById("option2").style.backgroundColor = "white";
+                                document.getElementById("option2").style.color = "#d1232a";
+                                document.getElementById("option3").style.backgroundColor = "white";
+                                document.getElementById("option3").style.color = "#d1232a";
                             }
                             document.getElementById("option" +option).style.backgroundColor = '#d1232a';
                             document.getElementById("option" +option).style.color = '#e7ea83';
